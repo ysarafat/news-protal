@@ -7,8 +7,13 @@ const getNewsCategory = () => {
 
 }
 const showNewsCategory = category_name => {
+    const getCategorySetion = document.getElementById('category-list')
     category_name.forEach(category_name => {
-        console.log(category_name);
+        console.log(category_name.category_name);
+        const createList = document.createElement('li')
+        createList.classList.add("list-unstyled")
+        createList.innerText = `${category_name.category_name}`
+        getCategorySetion.appendChild(createList)
     });
 
 }
